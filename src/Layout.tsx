@@ -1,44 +1,42 @@
 import { Link, Outlet } from "react-router-dom";
 
 function Layout() {
-
-const logo = "/img/Logo-HOOP2.png"; 
-
   return (
-    <div className="min-h-screen flex flex-col bg-black text-white">
-      {/* Header com o logo */}
-      <header className="bg-black border-b-4 border-yellow-500 py-6 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-4">
-            <img src={logo} alt="HOOP Store" className="h-20 md:h-24 drop-shadow-2xl" />
-            <span className="text-4xl md:text-5xl font-black text-yellow-400 tracking-wider hidden md:block">
-              HOOP
-            </span>
+    <div className="flex flex-col min-h-screen">
+      {/* Header */}
+      <header className="header">
+        <div className="container">
+          <Link to="/">
+            <img src="/img/Logo-HOOP2.png" alt="HOOP Store" className="logo" />
           </Link>
-
-          {/* Navbar */}
-          <nav className="flex gap-8 md:gap-12 text-lg font-bold">
-            <Link to="/" className="hover:text-yellow-400 transition">HOME</Link>
-            <Link to="/produtos" className="hover:text-yellow-400 transition">PRODUTOS</Link>
-            <Link to="/pesquisa/jordan" className="hover:text-yellow-400 transition hidden md:block">PESQUISA</Link>
-            <Link to="/contacto" className="hover:text-yellow-400 transition">CONTACTO</Link>
-            <Link to="/sobre" className="hover:text-yellow-400 transition">SOBRE</Link>
-          </nav>
         </div>
       </header>
 
-      {/* Páginas */}
-      <main className="flex-1">
-        <Outlet />
+      {/* Navegação */}
+      <nav className="nav">
+        <div className="container">
+          <ul className="nav-list">
+            <li><Link to="/" className="nav-link">Home</Link></li>
+            <li><Link to="/produtos" className="nav-link">Produtos</Link></li>
+            <li><Link to="/pesquisa/jordan" className="nav-link">Pesquisa</Link></li>
+            <li><Link to="/contacto" className="nav-link">Contacto</Link></li>
+            <li><Link to="/sobre" className="nav-link">Sobre</Link></li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* Conteúdo principal */}
+      <main className="main flex-1">
+        <div className="container">
+          <Outlet />
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-6 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            © 2025 HOOP STORE – Leonardo Alves | CTeSP Desenvolvimento de Software
-          </p>
-          <p className="text-yellow-400 font-bold mt-2">Legends Never Die</p>
+      <footer className="footer">
+        <div className="container">
+          <p>© 2025 HOOP Store – Leonardo Alves</p>
+          <p className="text-gold">Legends Never Die</p>
         </div>
       </footer>
     </div>
