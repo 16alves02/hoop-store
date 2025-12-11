@@ -1,27 +1,33 @@
-import { useParams } from 'react-router-dom';
-import { produtos } from '../data/produtos';
-import { useState } from 'react';
+import { useParams } from "react-router-dom";
+import { produtos } from "../data/produtos";
+import { useState } from "react";
 
-function ProdutoDetail() {
+function ProdutoDetalhes() {
   const { id } = useParams();
   const produto = produtos.find(p => p.id === Number(id));
   const [imagemAtual, setImagemAtual] = useState(0);
 
-  if (!produto) return <div>Produto não encontrado</div>;
+  if (!produto) return <div className="text-center text-2xl mt-20">Produto não encontrado</div>;
 
   return (
-    <div className="min-h-screen bg-black text-white py-12">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div className="mt-20 mb-20">
+      <h1 className="text-4xl font-bold text-center mb-10">{produto.nome}</h1>
+
+      <div className="grid md:grid-cols-2 gap-20">
         {/* Galeria */}
         <div>
-          <img src={produto.imagens[imagemAtual]} alt={produto.nome} className="w-full rounded-lg" />
-          <div className="flex gap-4 mt-6">
+          <img 
+            src={produto.imagens[imagemAtual]} 
+            alt={produto.nome} 
+            className="gallery-main" 
+          />
+          <div className="gallery-thumbs">
             {produto.imagens.map((img, index) => (
-              <img
+              <img 
                 key={index}
                 src={img}
-                alt="mini"
-                className={`w-24 h-24 object-cover rounded cursor-pointer border-4 ${imagemAtual === index ? 'border-yellow-400' : 'border-gray-700'}`}
+                alt={`Miniatura ${index + 1}`}
+                className={`gallery-thumb ${imagemAtual === index ? "active" : ""}`}
                 onClick={() => setImagemAtual(index)}
               />
             ))}
@@ -29,18 +35,16 @@ function ProdutoDetail() {
         </div>
 
         {/* Info */}
-        <div>
-          <h1 className="text-4xl font-black text-yellow-400">{produto.jogador}</h1>
-          <p className="text-2xl text-gray-400 mt-2">{produto.equipa}</p>
-          <p className="text-5xl font-black mt-8">€{produto.preco}</p>
-          <p className="mt-8 text-lg leading-relaxed">{produto.descricao}</p>
-          <button className="mt-10 bg-yellow-400 text-black px-12 py-5 text-xl font-bold rounded hover:bg-yellow-300">
-            ADICIONAR AO CARRINHO
-          </button>
+        <div className="text-left">
+          <h2 className="text-3xl font-bold mb-5">{produto.jogador}</h2>
+          <p className="text-xl mb-5">{produto.equipa}</p>
+          <p className="text-4xl font-bold mb-10">€{produto.preco}</p>
+          <p className="mb-10">{produto.descricao}</p>
+          <button className="btn-primary">Adicionar ao Carrinho</button>
         </div>
       </div>
     </div>
   );
 }
 
-export default ProdutoDetail;
+export default ProdutoDetalhes;

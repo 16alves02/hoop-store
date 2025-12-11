@@ -1,29 +1,25 @@
 function Sobre() {
   return (
-    <div className="min-h-screen bg-black text-white py-20">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-5xl font-black text-yellow-400 mb-12">SOBRE A HOOP</h1>
-        
-        <div className="bg-gray-900 rounded-xl p-10 shadow-2xl">
-          <p className="text-xl leading-relaxed mb-8">
-            HOOP é uma loja online dedicada às camisolas mais icónicas da história da NBA.  
-            Inspirada na Mitchell & Ness, trazemos até ti as peças que marcaram épocas, jogadores lendários e momentos inesquecíveis do basquetebol.
-          </p>
-          
-          <div className="my-12">
-            <h2 className="text-3xl font-bold text-yellow-400 mb-4">Projeto Académico</h2>
-            <p className="text-lg">
-              Trabalho realizado por <strong>Leonardo Alves</strong><br />
-              CTeSP em Desenvolvimento de Software<br />
-              Unidade Curricular: Tecnologias Web<br />
-              Professor: Carlos Guerra · 2025
-            </p>
-          </div>
+    <div className="mt-20 mb-20">
+      <h1 className="text-4xl font-bold text-center mb-20">SOBRE A HOOP STORE</h1>
 
-          <p className="text-5xl font-black text-yellow-400 mt-16">
-            Legends Never Die
-          </p>
-        </div>
+      <div className="max-w-3xl mx-auto text-left">
+        <p className="text-xl mb-10">
+          A HOOP Store é uma loja online dedicada às camisolas mais icónicas da história da NBA, inspirada na Mitchell & Ness. 
+          Aqui podes encontrar peças lendárias de jogadores como Jordan, Kobe e Curry.
+        </p>
+
+        <h2 className="text-3xl font-bold mb-5">Projeto Académico</h2>
+        <p className="text-lg mb-10">
+          Este site foi desenvolvido como projeto para a unidade curricular Tecnologias Web, no CTeSP em Desenvolvimento de Software. 
+          Utiliza React.JS com componentes funcionais, props, hooks como useState e useEffect, React Router e dados de um ficheiro JSON local.
+        </p>
+
+        <p className="text-lg">
+          Realizado por: <strong>Leonardo Alves</strong><br />
+          Professor: Carlos Guerra<br />
+          Ano: 2025
+        </p>
       </div>
     </div>
   );

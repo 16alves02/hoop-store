@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-type ProdutoCardProps = {
+type ProductCardProps = {
   id: number;
   nome: string;
   jogador: string;
@@ -9,19 +9,19 @@ type ProdutoCardProps = {
   imagem: string;
 };
 
-function ProdutoCard({ id, nome, jogador, equipa, preco, imagem }: ProdutoCardProps) {
+function ProductCard({ id, nome, jogador, equipa, preco, imagem }: ProductCardProps) {
   return (
-    <Link to={`/produto/${id}`} className="group">
-      <div className="bg-gray-900 rounded-lg overflow-hidden transform transition hover:scale-105 shadow-xl">
-        <img src={imagem} alt={nome} className="w-full h-80 object-cover" />
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-yellow-400">{jogador}</h3>
-          <p className="text-gray-400 text-sm">{equipa}</p>
-          <p className="text-2xl font-black mt-4">€{preco}</p>
+    <Link to={`/produto/${id}`}>
+      <div className="card">
+        <img src={imagem} alt={nome} className="card-img" />
+        <div className="card-body">
+          <h3 className="card-title">{jogador}</h3>
+          <p className="card-text">{equipa}</p>
+          <p className="card-price">€{preco}</p>
         </div>
       </div>
     </Link>
   );
 }
 
-export default ProdutoCard;
+export default ProductCard;

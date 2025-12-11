@@ -1,57 +1,81 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function Contacto() {
   const [formData, setFormData] = useState({
-    nome: '', email: '', mensagem: ''
+    nome: "",
+    email: "",
+    mensagem: ""
   });
   const [enviado, setEnviado] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simula envio
-    console.log('Mensagem enviada:', formData);
+    console.log("Mensagem enviada:", formData);
     setEnviado(true);
     setTimeout(() => setEnviado(false), 5000);
   };
 
   return (
-    <div className="min-h-screen bg-black text-white py-20">
-      <div className="max-w-2xl mx-auto px-6">
-        <h1 className="text-5xl font-black text-yellow-400 text-center mb-12">CONTACTO</h1>
-        
-        {enviado && (
-          <div className="bg-green-600 text-white p-6 rounded text-center mb-8">
-            Mensagem enviada com sucesso! Obrigado por entrares em contacto com a HOOP.
-          </div>
-        )}
+    <div className="mt-20 mb-20">
+      <h1 className="text-4xl font-bold text-center mb-20">CONTACTO</h1>
 
-        <form onSubmit={handleSubmit} className="space-y-8">
+      {enviado && (
+        <div className="text-center bg-green-600 text-white py-4 px-8 rounded mb-20 inline-block">
+          Mensagem enviada com sucesso! Obrigado por contactar a HOOP Store.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
+        <div className="form-group">
           <input
             type="text"
+            name="nome"
             placeholder="Nome completo"
             required
-            className="w-full px-6 py-4 bg-gray-900 border border-gray-700 rounded text-white text-lg"
-            onChange={(e) => setFormData({...formData, nome: e.target.value})}
+            className="form-input"
+            value={formData.nome}
+            onChange={handleChange}
           />
+        </div>
+
+        <div className="form-group">
           <input
             type="email"
+            name="email"
             placeholder="Email"
             required
-            className="w-full px-6 py-4 bg-gray-900 border border-gray-700 rounded text-white text-lg"
-            onChange={(e) => setFormData({...formData, email: e.target.value})}
+            className="form-input"
+            value={formData.email}
+            onChange={handleChange}
           />
+        </div>
+
+        <div className="form-group">
           <textarea
+            name="mensagem"
             placeholder="Mensagem"
-            rows={6}
+            rows={8}
             required
-            className="w-full px-6 py-4 bg-gray-900 border border-gray-700 rounded text-white text-lg"
-            onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
+            className="form-input"
+            value={formData.mensagem}
+            onChange={handleChange}
           />
-          <button type="submit" className="w-full bg-yellow-400 text-black py-5 text-xl font-bold rounded hover:bg-yellow-300 transition">
+        </div>
+
+        <div className="text-center">
+          <button type="submit" className="btn-primary">
             ENVIAR MENSAGEM
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }
