@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import logo from "../public/img/Logo-HOOP2.png";
+import { Link, Outlet } from "react-router-dom";
 
 function Home() {
+
+const logo = "/img/Logo-HOOP2.png";
+ 
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
       {/* Fundo com Jordan grande e subtil */}

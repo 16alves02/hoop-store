@@ -1,7 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
-import logo from "../public/img/Logo-HOOP2.png";
 
 function Layout() {
+
+const logo = "/img/Logo-HOOP2.png"; 
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       {/* Header com o logo */}
