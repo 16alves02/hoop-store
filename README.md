@@ -1,3 +1,26 @@
+# HOOP – Legends Store
+
+Loja online de camisolas icónicas NBA (Jordan, Kobe, etc.), inspirada na Mitchell & Ness.
+
+## Tecnologias
+- React + Vite
+- React Router v6
+- Tailwind CSS
+- JSON local para dados
+
+## Funcionalidades
+- `/` – Home com hero
+- `/produtos` – Lista de produtos (useState + map)
+- `/produto/:id` – Detalhes com galeria (useParams + useState)
+- `/pesquisa/:termo` – Pesquisa dinâmica
+- `/contacto` – Formulário com validação (useState)
+
+## Como correr
+npm install  
+npm run dev
+
+Feito por Leonardo Alves – CTeSP Desenvolvimento de Software, 2025.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -1,4 +1,4 @@
-import produtosData from './produtos.json';
+import produtosData from './produtos.json'
 
 export const produtos = produtosData as Array<{
   id: number;
@@ -8,4 +8,4 @@ export const produtos = produtosData as Array<{
   preco: number;
   imagens: string[];
   descricao: string;
-}>;
+}>

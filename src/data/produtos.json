@@ -1,51 +1,63 @@
-[ 
-    { 
-        "id": 1, 
-        "nome": "Camisola autêntica de Michael Jordan dos Chicago Bulls, BRANCA, Finais da NBA de 1998", 
-        "jogador": "Michael Jordan", 
-        "equipa": "Chicago Bulls", 
-        "preco": 299.99, 
-        "imagens": [ "img/jordan-front.png", "img/jordan-back.png", "img/jordan-detail.png" ], 
-        "descricao": "Voe alto sempre que vestir esta camisola autêntica Michael Jordan 1998 NBA Finals Home. Uma representação da grandeza na sua forma mais pura, os detalhes retro desta camisola são inspirados nos estilos icónicos usados pelos Chicago Bulls no passado. Air Jordan foi um talento único no basquetebol, e o seu jogo inspirará gerações de fãs do desporto. Correspondendo aos elevados padrões estabelecidos pelo próprio Jordan, cada ponto desta camisola é costurado de acordo com as especificações exatas da equipa, proporcionando uma qualidade excepcional e um toque premium." 
-    },
-
-    { 
-        "id": 2, 
-        "nome": "Lakers 2000-01 Kobe Bryant", 
-        "jogador": "Kobe Bryant",
-        "equipa": "Los Angeles Lakers", 
-        "preco": 319.99, 
-        "imagens": [ "img/kobe-front.jpg", "img/kobe-back.jpg", "img/kobe-detail.jpg" ], 
-        "descricao": "Camisola do tricampeonato. Mamba forever." 
-    },
-
-    { 
-        "id": 3, 
-        "nome": "76ers 2000-01 Allen Iverson", 
-        "jogador": "Allen Iverson", 
-        "equipa": "Philadelphia 76ers", 
-        "preco": 279.99, 
-        "imagens": [ "img/iverson-front.jpg", "img/iverson-back.jpg" ], 
-        "descricao": "The Answer. A camisola mais icónica dos anos 2000." 
-    }, 
-    
-    { 
-        "id": 4, 
-        "nome": "Boston Celtics Larry Bird", 
-        "jogador": "Larry Bird", 
-        "equipa": "Boston Celtics", 
-        "preco": 259.99, 
-        "imagens": ["img/bird-front.jpg", "img/bird-back.jpg"], 
-        "descricao": "Legend #33." 
-    },
-
-    { 
-        "id": 5, 
-        "nome": "Warriors 2016-17 Stephen Curry", 
-        "jogador": "Stephen Curry", 
-        "equipa": "Golden State Warriors", 
-        "preco": 289.99, 
-        "imagens": ["img/curry-front.jpg", "img/curry-back.jpg"], 
-        "descricao": "The baby-faced assassin." 
-    } 
+[
+  {
+    "id": 1,
+    "nome": "Chicago Bulls 1997-98 Michael Jordan Home Finals",
+    "jogador": "Michael Jordan",
+    "equipa": "Chicago Bulls",
+    "preco": 299.99,
+    "imagens": [
+      "img/jordan-front.png",
+      "img/jordan-back.png",
+      "img/jordan-detail.png"
+    ],
+    "descricao": "Camisola autêntica das Finais de 1998. A última dança. Mitchell & Ness Hardwood Classics."
+  },
+  {
+    "id": 2,
+    "nome": "Los Angeles Lakers 2000-01 Kobe Bryant",
+    "jogador": "Kobe Bryant",
+    "equipa": "Los Angeles Lakers",
+    "preco": 319.99,
+    "imagens": [
+      "img/kobe-front.jpg",
+      "img/kobe-back.jpg"
+    ],
+    "descricao": "Tricampeonato. Mamba mentality forever."
+  },
+  {
+    "id": 3,
+    "nome": "Philadelphia 76ers 2000-01 Allen Iverson",
+    "jogador": "Allen Iverson",
+    "equipa": "Philadelphia 76ers",
+    "preco": 279.99,
+    "imagens": [
+      "img/iverson-front.jpg",
+      "img/iverson-back.jpg"
+    ],
+    "descricao": "The Answer. A camisola mais icónica dos anos 2000."
+  },
+  {
+    "id": 4,
+    "nome": "Boston Celtics 1985-86 Larry Bird",
+    "jogador": "Larry Bird",
+    "equipa": "Boston Celtics",
+    "preco": 259.99,
+    "imagens": [
+      "img/bird-front.jpg",
+      "img/bird-back.jpg"
+    ],
+    "descricao": "Larry Legend #33."
+  },
+  {
+    "id": 5,
+    "nome": "Golden State Warriors 2016-17 Stephen Curry",
+    "jogador": "Stephen Curry",
+    "equipa": "Golden State Warriors",
+    "preco": 289.99,
+    "imagens": [
+      "img/curry-front.jpg",
+      "img/curry-back.jpg"
+    ],
+    "descricao": "The baby-faced assassin."
+  }
 ]
